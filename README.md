@@ -64,8 +64,6 @@ Stores ─────┘                    └── Stores >── Regions
 Products ──< Returns >── Stores
 ```
 
-> 📷 *Add a screenshot of your model view:* `![Data Model](images/data_model.png)`
-
 ## 🧹 Data Preparation
 
 Performed in **Power Query**:
@@ -85,8 +83,6 @@ Total Cost = SUMX(Transactions, Transactions[quantity] * RELATED(Products[produc
 
 Total Profit = [Total Revenue] - [Total Cost]
 
-Profit Margin % = DIVIDE([Total Profit], [Total Revenue])
-
 Total Transactions = COUNTROWS(Transactions)
 
 Quantity Sold = SUM(Transactions[quantity])
@@ -94,13 +90,7 @@ Quantity Sold = SUM(Transactions[quantity])
 Total Returns = SUM(Returns[quantity])
 
 Return Rate = DIVIDE([Total Returns], [Quantity Sold])
-
-Revenue LY = CALCULATE([Total Revenue], SAMEPERIODLASTYEAR('Calendar'[Date]))
-
-Revenue YoY % = DIVIDE([Total Revenue] - [Revenue LY], [Revenue LY])
 ```
-
-> Adjust column names to match your own model.
 
 ## 📊 Dashboard Pages & Features
 
@@ -125,22 +115,6 @@ Revenue YoY % = DIVIDE([Total Revenue] - [Revenue LY], [Revenue LY])
 
 **Interactive features:** slicers (year, quarter, country, store), cross-filtering, drill-down, drill-through, tooltips, and bookmarks.
 
-> 📷 *Add dashboard screenshots:*
-> `![Summary](images/summary.png)`
-> `![Stores](images/stores.png)`
-> `![Products](images/products.png)`
-> `![Customers](images/customers.png)`
-
-## 💡 Key Insights
-
-*Replace these with the findings from your own dashboard:*
-
-- **Top market:** [e.g., USA generates X% of revenue]
-- **Best stores:** [e.g., Store N leads in profit]
-- **Top products:** [e.g., Brand X / Department Y drives most sales]
-- **Trend:** [e.g., Revenue peaks in months X and Y]
-- **Returns:** [e.g., Return rate is X%, highest in category Y]
-
 ## ▶️ How to Run
 
 1. Clone this repository:
@@ -155,9 +129,9 @@ Revenue YoY % = DIVIDE([Total Revenue] - [Revenue LY], [Revenue LY])
 ## 📁 Repository Structure
 
 ```
-├── Maven_Market_Dashboard.pbix   # Power BI report
-├── data/                         # Source CSV files
-├── images/                       # Screenshots of the dashboard and model
+├── Maven_Market_Dashboard.pbix     # Power BI report
+├── raw data/                       # Source CSV files
+├── dashboard photo/                # Screenshot of the dashboard 
 └── README.md
 ```
 
